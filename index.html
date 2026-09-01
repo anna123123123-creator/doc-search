@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文档关键词检索 · Doc Search</title>
+<meta name="description" content="免费开源、纯浏览器运行的文档关键词检索工具。粘贴长文档，输入问题，自动定位并高亮最相关的段落，基于 TF-IDF 关键词打分，不联网、不上传文档。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>文档<span class="accent">关键词检索</span></h1>
+    <p class="tagline">粘贴一份长文档，输入问题或关键词，自动找出并高亮最相关的几个段落。基于关键词词频打分，不是语义理解，也不联网。</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel panel-doc">
+      <div class="panel-head">
+        <span>文档</span>
+        <button id="btnExample" class="btn btn-ghost">加载示例</button>
+      </div>
+      <textarea id="docInput" spellcheck="false" placeholder="把长文档粘贴到这里，段落之间用空行分隔……"></textarea>
+    </section>
+
+    <section class="panel panel-result">
+      <div class="panel-head">
+        <span>检索结果</span>
+      </div>
+      <form id="queryForm" class="query-form">
+        <input id="queryInput" type="text" placeholder="输入问题或关键词，回车检索…" autocomplete="off">
+        <button type="submit" class="btn btn-primary">检索</button>
+      </form>
+      <div id="resultList" class="result-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>MIT 协议开源，纯前端关键词打分，不联网、不上传文档、不调用任何 AI 接口。</p>
+    <p>想要真正理解语义的 AI 问答、长文档摘要、引用溯源？<a href="https://inzyxuashop.com/aiwenshu-yuanma.html" target="_blank" rel="noopener">看看完整版 AI 文档问答源码 →</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
